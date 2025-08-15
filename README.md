@@ -18,17 +18,7 @@ You can install the package directly from GitHub:
 devtools::install\_github("ainvernizzi17/EUnet")
 
 ## Usage
-
 Load the package and dataset:
-
 library(EUnet)
-eu\_data <- load\_euvar()
-head(eu\_data)
-
-Merge selected variables into your own dataset:
-
-merged\_df <- merge\_euvar(df, vars = c("eu.a", "nato.a"))
-
-## License
-
-MIT + file LICENSE
+eu_data <- load_euvar()
+head(eu_data)
