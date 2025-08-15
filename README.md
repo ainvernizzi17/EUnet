@@ -17,8 +17,22 @@ You can install the package directly from GitHub:
 
 devtools::install\_github("ainvernizzi17/EUnet")
 
-## Usage
-Load the package and dataset:
+# Packages
 library(EUnet)
-eu_data <- load_euvar()
-head(eu_data)
+library(dplyr)
+
+# Load the full EU dataset
+data <- load_EUnet()
+
+# Example Merge: Dyadic dataset
+df <- data.frame(
+  country.a = c("France", "Germany", "Albania"),
+  country.b = c( "Italy", "Poland", "Switzerland"),
+  year = c(1990:2010)
+)
+
+# Merge EUnet
+merged_df <- merge_EUnet(df, var=c("nato.a", "eu.a"))
+str(merged_df)
+
+
