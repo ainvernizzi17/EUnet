@@ -2,9 +2,11 @@ Package: EUnet
 Title: EU Country Pair and Membership Data (1980–2024)
 Version: 0.1.0
 Authors@R: 
-    person("Alessia", "Invernizzi", 
+    c(person("Alessia", "Invernizzi", 
            email = "ainvernizzi@ethz.ch", 
-           role = c("aut", "cre"))
+           role = c("aut", "cre")),
+      person("Elisa", "Paepcke", email = "elisa.paepcke@gess.ethz.ch", role = c("cre", "ctb"))
+      )
 Description: Functions and data helpers for EU-related dyadic datasets 
     (1980–2024), including EU, NATO, OSCE, Schengen, Eurozone, EEA, and 
     EFTA memberships.
