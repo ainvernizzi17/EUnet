@@ -2,20 +2,10 @@
 
 devtools::install_github("ainvernizzi17/EUnet")
 library(EUnet,
-        dplyr,
-        tidyverse)
+        dplyr)
 
 ##TO-DO: Change data - to longitudinal Eurobarometer Data!
 #Select Test Dataset
-ZA8822_v1_0_0 <- read_dta("test/FlashEurobarometer2024_EUcrisismanagement/ZA8822_v1-0-0.dta")
-> View(ZA8822_v1_0_0)
+test_data <- readRDS("C:/Users/epaepcke/Documents/GitRepos/EUnet/test/test_data.rds")
 
-
-testdf <- ZA8822_v1_0_0 %>% 
-  dplyr::select(serialid,
-                ipscntry,
-                country,
-                isocntry,
-                d1,
-                q1_1
-                                          )
+data <- load_EUnet()
